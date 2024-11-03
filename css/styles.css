@@ -85,7 +85,7 @@ img {
   border-radius: 2px;
   display: block;
   position: absolute;
-  bottom: -1px;
+  bottom: -3px;
   left: 0;
   background-color: #404bbf;
 }
@@ -160,14 +160,14 @@ img {
   margin: 0 56px;
 }
 .menu-btn {
-  background-color: #2f2f37;
-  width: 16.8px;
-  height: 2.4px;
-  border-radius: 4px;
+  padding: 0;
   border: none;
-  box-shadow: 0 4px #2f2f37, 0 8px #2f2f37;
+  background-color: transparent;
 }
-
+.svg-btn-menu {
+  display: block;
+  fill: #2f2f37;
+}
 .button {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -437,7 +437,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  padding-bottom: 72px;
   text-align: left;
 }
 .footer-container {
@@ -446,6 +445,10 @@ img {
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+
+.social-media-container {
+  margin-bottom: 72px;
 }
 
 .social-media {
@@ -460,7 +463,6 @@ img {
 .footer-ul {
   display: flex;
   gap: 16px;
-  padding-bottom: 72px;
 }
 .footer-li {
   width: 40px;
@@ -505,9 +507,10 @@ img {
 .form-footer {
   display: flex;
   gap: 24px;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+}
+.logo-par-container {
+  margin-bottom: 72px;
 }
 .form-input {
   padding-top: 8px;
@@ -523,6 +526,7 @@ img {
   letter-spacing: 0.04em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: #ffffff;
+  opacity: 60%;
 }
 .form-input::placeholder {
   color: #ffffff;
@@ -714,7 +718,7 @@ img {
   margin-bottom: 24px;
   display: flex;
   align-items: center;
-  gap: 7, 5px;
+  gap: unset;
 }
 
 .checkbox-label {
@@ -725,6 +729,7 @@ img {
   display: flex;
   align-items: center;
   gap: 7px;
+  flex-shrink: 0;
 }
 .checkbox-span {
   width: 16px;
@@ -900,7 +905,7 @@ img {
     max-width: 768px;
   }
   .third-ul {
-    gap: 24px;
+    gap: 72px 24px;
     flex-direction: row;
   }
   .advantages {
@@ -942,6 +947,9 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
+  .second-section {
+    padding: 120px 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -950,7 +958,7 @@ img {
     max-width: 768px;
   }
   .four-ul {
-    gap: 24px;
+    gap: 64px 24px;
   }
   .third-li {
     flex-basis: calc((100% - 24px) / 2);
@@ -964,6 +972,9 @@ img {
   }
   .third-li {
     flex-basis: calc((100% - 72px) / 4);
+  }
+  .third-section {
+    padding: 120px 0;
   }
 }
 
@@ -979,6 +990,9 @@ img {
   .five-li {
     flex-basis: calc((100% - 24px) / 2);
   }
+  .four-section {
+    padding: 96px 0;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -992,6 +1006,9 @@ img {
   }
   .five-li {
     flex-basis: calc((100% - 48px) / 3);
+  }
+  .four-section {
+    padding: 120px 0;
   }
 }
 
@@ -1049,7 +1066,7 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
-    padding: 0 auto;
+    margin: 0 auto;
     align-items: center;
   }
   .button {
@@ -1071,6 +1088,9 @@ img {
   .first-section {
     padding: 188px 0;
   }
+  .main-text {
+    max-width: 496px;
+  }
 }
 
 @media (min-resolution: 192dpi) {
@@ -1088,13 +1108,16 @@ img {
     width: 100%;
     max-width: 768px;
   }
+  .footer {
+    padding: 96px 0;
+  }
   .footer-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
     text-align: left;
-    max-width: 496px;
+    max-width: 584px;
     align-items: normal;
   }
   .logo-par-container {
@@ -1107,10 +1130,9 @@ img {
   }
   .form-container-footer {
     width: 100%;
-  }
-  .form-container-footer {
     align-items: center;
   }
+
   .footer-p {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -1119,10 +1141,16 @@ img {
     letter-spacing: 0.02em;
     color: #f4f4fd;
   }
+  .footer-ul {
+    justify-content: space-between;
+  }
   .form-footer {
     display: flex;
     gap: 24px;
     flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    justify-content: normal;
   }
   .sub-p {
     margin-right: auto;
@@ -1134,6 +1162,9 @@ img {
     width: 100%;
     max-width: 1158px;
   }
+  .footer {
+    padding: 100px 0;
+  }
   .footer-p {
     max-width: 264px;
     padding-bottom: 0;
@@ -1143,6 +1174,7 @@ img {
     flex-wrap: nowrap;
     flex-direction: row;
     text-align: left;
+    gap: unset;
   }
   .logo-par-container {
     margin-right: 120px;
